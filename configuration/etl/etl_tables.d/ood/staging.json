@@ -2,7 +2,7 @@
     "table_definition": {
         "name": "staging",
         "engine": "InnoDB",
-        "charset": "utf8mb4",
+        "charset": "utf8",
         "collation": "utf8_unicode_ci",
         "columns": [
             {
