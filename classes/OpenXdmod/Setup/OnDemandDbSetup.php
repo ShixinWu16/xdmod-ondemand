@@ -55,6 +55,11 @@ EOT
             'DB Admin Password:'
         );
 
+        $xdmod_host = $this->console->prompt(
+            'XDMoD Server name:',
+            'xdmod.xdmod_default'
+        );
+
         try {
 
             $sectionForDatabase = array(
@@ -66,7 +71,8 @@ EOT
                     'db_host' => $settings[$section . '_host'],
                     'db_port' => $settings[$section . '_port'],
                     'db_user' => $settings[$section . '_user'],
-                    'db_pass' => $settings[$section . '_pass']
+                    'db_pass' => $settings[$section . '_pass'],
+                    'xdmod_host'=> $xdmod_host
                 );
 
                 $this->createDatabases(
